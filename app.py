@@ -32,4 +32,4 @@ def resources_page_data():
 
 
 if __name__ == '__main__':
-    app.run(debug=True) #e
+    app.run(debug=True)
