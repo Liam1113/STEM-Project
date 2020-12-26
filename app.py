@@ -27,7 +27,7 @@ def resources_page_data():
         'Template': 'Template - https://github.com/michaelmahony/flask-jumping-off',
         'Source Code': 'Source Code - https://github.com/Liam1113/STEM-Project'}
 
-# hello
+
     return render_template('resources.html', resources_data=resources)
 
 
