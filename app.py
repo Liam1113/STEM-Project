@@ -2,22 +2,25 @@ from flask import Flask, render_template
 
 app = Flask(__name__,template_folder='pages')
 
-
 @app.route('/')
-def home_page_data():
-    introduction = 'This is how flask passes data through. You can pass through lists, dicts, etc., and display the ' \
+def home_page():
+    homeintro = 'Hi, welcome to my website. On here i will be displaying various projects and other things so feel free to have a look around. '
+
+@app.route('/stem')
+def stem_page_data():
+    stemintroduction = 'This is how flask passes data through. You can pass through lists, dicts, etc., and display the ' \
                    'results in the template. With this said this website will explain how this all works. '
-    paragraph_1 = "All the elements like the Navbar and text are made with HTML, but the Python file stores the data " \
+    stemparagraph_1 = "All the elements like the Navbar and text are made with HTML, but the Python file stores the data " \
                   "for the text. What this means is that this text you are reading is stored in a Python script, " \
                   "but with Flask it is referenced in HTML. "
 
 
-    return render_template('home.html', intro_data=introduction, paragraph_1_data=paragraph_1)
+    return render_template('stem.html', stemintro_data=stemintroduction, stemparagraph_1_data=stemparagraph_1)
 
 
-@app.route('/resources')
-def resources_page_data():
-    resources = {
+@app.route('/stem-resources')
+def stemresources_page_data():
+    stemresources = {
 
         'Py': 'Python 3.9 - https://www.python.org/',
         'HTML5': 'HTML5 - https://html.spec.whatwg.org/',
@@ -28,7 +31,7 @@ def resources_page_data():
         'Source Code': 'Source Code - https://github.com/Liam1113/STEM-Project'}
 
 
-    return render_template('resources.html', resources_data=resources)
+    return render_template('stemresources.html', stemresources_data=stemresources)
 
 
 if __name__ == '__main__':
