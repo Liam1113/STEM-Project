@@ -2,7 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__,template_folder='pages')
 
-@app.route('/')
+@app.route('/home')
 def home_page():
     homeintro = 'Hi, welcome to my website. On here i will be displaying various projects and other things so feel free to have a look around. '
 
