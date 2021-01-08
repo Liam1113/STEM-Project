@@ -14,7 +14,7 @@ def stem_page_data():
                    'results in the template. With this said this website will explain how this all works. '
     stemparagraph_1 = "All the elements like the Navbar and text are made with HTML, but the Python file stores the data " \
                   "for the text. What this means is that this text you are reading is stored in a Python script, " \
-                  "but with Flask it is referenced in HTML. "
+                  "but with Flask it is referenced in HTML. " # e
 
 
     return render_template('stem.html', stemintro_data=stemintroduction, stemparagraph_1_data=stemparagraph_1)
