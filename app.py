@@ -4,7 +4,7 @@ app = Flask(__name__,template_folder='pages')
 
 @app.route('/home')
 def home_page():
-    homeintro = 'Hi, welcome to my website. On here i will be displaying various projects and other things so feel free to have a look around. '
+    homeintro = 'Hi, welcome to my website. On here I will be displaying various projects and other things so feel free to have a look around. '
 
     return render_template('home.html', homeintro=homeintro)
 
